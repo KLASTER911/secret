@@ -14,8 +14,8 @@ public class Secret {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "user")
-    private String  user;
+    @Column(name = "login")
+    private String  login;
 
     @Column(name = "message")
     private String  message;
@@ -40,7 +40,7 @@ public class Secret {
 
     public Secret(Integer id, String user, String message, Integer accessCode, String urlToAccess, Boolean isAvaileble, Integer dateCreate, Integer dateToDelete) {
         this.id = id;
-        this.user = user;
+        this.login = user;
         this.message = message;
         this.accessCode = accessCode;
         this.urlToAccess = urlToAccess;
@@ -58,11 +58,11 @@ public class Secret {
     }
 
     public String getUser() {
-        return this.user;
+        return this.login;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this.login = user;
     }
 
     public String getMessage() {
